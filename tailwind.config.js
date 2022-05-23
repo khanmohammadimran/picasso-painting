@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'finger': 'Finger Paint'
+        'finger': 'Finger Paint',
+        'josefin': 'Josefin Sans'
       }
     },
   },

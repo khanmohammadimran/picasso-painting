@@ -1,0 +1,152 @@
+[
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+        "name": "Tents",
+        "supplier": "MSR",
+        "minimumOrderQuantity": 150,
+        "availableQuantity": 900,
+        "price": 70,
+        "img": "https://i.ibb.co/k0J5TN4/tents.jpg",
+        "description": " It's Cheaper Living in a Tent. It's a Challenge. Living in a Tent Leaves A Smaller Footprint."
+    },
+    {
+        "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+        "name": "Travel Shoes",
+        "supplier": "Naot",
+        "minimumOrderQuantity": 80,
+        "availableQuantity": 1600,
+        "price": 25,
+        "img": "https://i.ibb.co/stGw8tX/travel-shoes.jpg",
+        "description": " Easy to slip on and off. Comfortable for long-haul flights. Versatility. Easy to pack. Good for walks. Durability."
+    },
+    {
+        "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+        "name": "Hiking Bag",
+        "supplier": "Osprey",
+        "minimumOrderQuantity": 360,
+        "availableQuantity": 125400,
+        "price": 20,
+        "img": "https://i.ibb.co/VM8mj2c/hiking-bag.jpg",
+        "description": "A good hiking backpack ensures that you have just the right amount of space to carry all the supplies you need without burdening you with a heavy load."
+    },
+    {
+        "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+        "name": "Hiking Jackets",
+        "supplier": "Patagonia",
+        "minimumOrderQuantity": 170,
+        "availableQuantity": 8500,
+        "price": 45,
+        "img": "https://i.ibb.co/fCy7dT4/hiking-jacket.jpg",
+        "description": "Waterproof. By default, many decent hiking jackets will come with waterproof capabilities as standard.Lightweight."
+    },
+    {
+        "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
+        "name": "Climbing Belt",
+        "supplier": "Petzl Sitta",
+        "minimumOrderQuantity": 40,
+        "availableQuantity": 300,
+        "price": 35,
+        "img": "https://i.ibb.co/LdT4fXt/climbing-belt.jpg",
+        "description": "A climbing harness is a device which allows a climber access to the safety of a rope.It is used in rock and ice climbing, abseiling, and lowering"
+    },
+    {
+        "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
+        "name": "Water Bottles",
+        "supplier": "Klean Kanteen Kid Classic Sport Water Bottle",
+        "minimumOrderQuantity": 500,
+        "availableQuantity": 17000,
+        "price": 5,
+        "img": "https://i.ibb.co/gJmMq05/water-bottle.jpg",
+        "description": " Water Bottles For Hiking Plus, stainless steel bottles prevent your water from getting too warm in hot climates. They also tend to hold up better if you drop them."
+    },
+    {
+        "id": "9c0c13c2-54e4-4001-809b-afbd9d84037d",
+        "name": "Binoculars",
+        "supplier": "Celestron Cometron",
+        "minimumOrderQuantity": 30,
+        "availableQuantity": 210,
+        "price": 160,
+        "img": "https://i.ibb.co/Stkwbhm/binoculars.jpg",
+        "description": "Binoculars are designed to give an upright view that is correctly oriented left-to-right. Because they allow use of both eyes in a natural way"
+    },
+    {
+        "id": "1564a06b-692f-4f2e-8413-9c8a1cc2da77",
+        "name": "Climbing Rope",
+        "supplier": "Black Diamond 9.6",
+        "minimumOrderQuantity": 85,
+        "availableQuantity": 480,
+        "price": 60,
+        "img": "https://i.ibb.co/5YLXDZc/climbing-rope.jpg",
+        "description": "A great way to develop grip, rope climbing helps build biceps and upper body. It helps develop physical and mental strength. If performed correctly rope climbing helps develop endurance"
+    },
+    {
+        "id": "ac44095f-230e-4502-8816-dea3eaae8320",
+        "name": "Compass",
+        "supplier": "Suunto",
+        "minimumOrderQuantity": 30,
+        "availableQuantity": 3600,
+        "price": 350,
+        "img": "https://i.ibb.co/Dw5C4Bd/compass.jpg",
+        "description": "Using a compass with a map gives a broader geographical context, helps you remember the route and learn about other things on the way. A compass and map are very reliable."
+    },
+    {
+        "id": "d0803f97-966f-4296-ad31-a7f70fc86fab",
+        "name": "Fire Starter",
+        "supplier": "UST Strikeforce",
+        "minimumOrderQuantity": 500,
+        "availableQuantity": 36500,
+        "price": 7,
+        "img": "https://i.ibb.co/mvKYkhS/fire-starter.jpg",
+        "description": "it keeps you warm: this advantage is especially helpful if you're lost or in trouble somewhere in the wilderness provides a source of light."
+    },
+    {
+        "id": "8a5b4a9c-76ea-4fbb-9c70-9548de4eab01",
+        "name": "First Aid",
+        "supplier": "Red Cross",
+        "minimumOrderQuantity": 45,
+        "availableQuantity": 870,
+        "price": 90,
+        "img": "https://i.ibb.co/b1b2Xj4/first-aid.jpg",
+        "description": "It does more than help save lives. It's true that having first aid training undoubtedly helps save lives. It enables you to increase patient comfort."
+    },
+    {
+        "id": "b357e19b-4dd9-4fc7-b5c0-9ed5255464ba",
+        "name": "Head Lamp",
+        "supplier": "Petzl Actik Core",
+        "minimumOrderQuantity": 50,
+        "availableQuantity": 387,
+        "price": 25,
+        "img": "https://i.ibb.co/KNqfYrq/headlamp.jpg",
+        "description": "headlamps enhance the road safety because of clear illumination. It has very high service life compared to other types of headlamps."
+    },
+    {
+        "id": "e4220958-06d2-4d50-96fa-0163a563f43d",
+        "name": "Hiking Bottles",
+        "supplier": "Hydro Flask",
+        "minimumOrderQuantity": 85,
+        "availableQuantity": 1200,
+        "price": 20,
+        "img": "https://i.ibb.co/bJzBm3b/Hiking-bottles-holder.jpg",
+        "description": "Wide mouth water bottle is ideal for hiking because it is easier to refill from any water source. Besides it can be used to carry smoothies and thick shakes."
+    },
+    {
+        "id": "ae69f0e4-559c-4b24-8032-80b63f9b5073",
+        "name": "Hiking Jackets",
+        "supplier": "Cabela's",
+        "minimumOrderQuantity": 35,
+        "availableQuantity": 6540,
+        "price": 40,
+        "img": "https://i.ibb.co/xCMTyxV/Untitled-design-2.png",
+        "description": " A full-length pair of trekking pants gives reliable protection on the trail and avoids issues such as cuts or scrapes from thorny bushes, twigs."
+    },
+    {
+        "id": "dbf7ab3f-b383-4d95-8ab7-f55fcf6fa5f2",
+        "name": "Snow Glasses",
+        "supplier": "Oakley Flight Deck",
+        "minimumOrderQuantity": 90,
+        "availableQuantity": 19000,
+        "price": 30,
+        "img": "https://i.ibb.co/HGV70Dn/snow-glasses.jpg",
+        "description": " Snow glasses offer many benefits. They can help protect your eyes from harmful ultraviolet (UV) rays. As well as also offering color and contrast enhancement."
+    }
+]
