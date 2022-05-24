@@ -1,21 +1,24 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    };
+
+
     const menuItems = <>
         <li><Link to='/home' className='text-slate-600 text-xl font-raleway'>Home</Link></li>
         <li><Link to='/blog' className='text-slate-600 text-xl font-raleway'>Blog</Link></li>
         <li><Link to='/myportfolio' className='text-slate-600 text-xl font-raleway'>My Portfolio</Link></li>
         <li><Link to='/purchase' className='text-slate-600 text-xl font-raleway'>Purchase</Link></li>
         <li><Link to='/dashboard' className='text-slate-600 text-xl font-raleway'>Dashboard</Link></li>
-        {
-            if(user){
-            <li><Link to='/signout' className='text-slate-600 text-xl font-raleway'>Sign Out</Link></li>
-        }
-        else{
-            <li><Link to='/login' className='text-slate-600 text-xl font-raleway'>Login</Link></li>
-        }
-        }
+        <li>{user ? <button onClick={logout} className="btn btn-ghost text-slate-600 text-xl font-raleway normal-case font-normal">Sign Out</button> : <Link to='/login' className='text-slate-600 text-xl font-raleway'>Login</Link>}</li>
     </>
     return (
         <div className="navbar bg-base-100 lg:flex lg:justify-around">

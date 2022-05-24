@@ -1,9 +1,9 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -16,13 +16,16 @@ const Signup = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const navigate = useNavigate();
+
     let signInError;
 
-    if (error || gError) {
-        signInError = <p className='text-red-500 font-sans'><small>{error?.message || gError?.message}</small></p>
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500 font-sans'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (loading || gLoading) {
+    if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
 
@@ -30,9 +33,12 @@ const Signup = () => {
         console.log(user || gUser)
     }
 
-    const onSubmit = data => {
+    const onSubmit = async data => {
         console.log(data);
-        createUserWithEmailAndPassword(data.email, data.password)
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        console.log('update done')
+        navigate('/home');
     }
 
 
@@ -108,7 +114,7 @@ const Signup = () => {
                             </label>
                         </div>
                         {signInError}
-                        <input className='btn btn-ghost text-white w-full max-w-xs bg-neutral bg-gradient-to-r from-purple-400 to-pink-600' type="submit" value="Sign Up" />
+                        <input className='btn btn-ghost border-0 font-sans text-white w-full max-w-xs bg-gradient-to-r from-purple-400 to-pink-600' type="submit" value="Sign Up" />
                     </form>
                     <p className='text-center font-raleway font-bold'><small>Already have an account? <Link className='text-blue-600' to="/login">Please Login</Link> </small></p>
                     <div className="divider">OR</div>

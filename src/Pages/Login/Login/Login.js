@@ -3,7 +3,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../../firebase.init'
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -16,6 +16,10 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
     let signInError;
 
     if (error || gError) {
@@ -27,12 +31,12 @@ const Login = () => {
     }
 
     if (user || gUser) {
-        console.log(user || gUser)
+        navigate(from, { replace: true });
     }
 
     const onSubmit = data => {
         console.log(data);
-        signInWithEmailAndPassword(data.email, data.password)
+        signInWithEmailAndPassword(data.email, data.password);
     }
 
 
@@ -91,7 +95,7 @@ const Login = () => {
                             </label>
                         </div>
                         {signInError}
-                        <input className='btn btn-ghost text-white w-full max-w-xs bg-neutral bg-gradient-to-r from-purple-400 to-pink-600' type="submit" value="Login" />
+                        <input className='btn btn-ghost border-0 font-sans text-white w-full max-w-xs bg-gradient-to-r from-purple-400 to-pink-600' type="submit" value="Login" />
                     </form>
                     <p className='text-center font-raleway font-bold'><small>New to Picasso Painting? <Link className='text-blue-600' to="/signup">Create new account</Link> </small></p>
                     <div className="divider">OR</div>
