@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItems = <>
-        <li><Link to='/home' className='text-slate-600 text-xl font-bold font-josefin'>Home</Link></li>
-        <li><Link to='/blog' className='text-slate-600 text-xl font-bold font-josefin'>Blog</Link></li>
-        <li><Link to='/myportfolio' className='text-slate-600 text-xl font-bold font-josefin'>My Portfolio</Link></li>
-        <li><Link to='/purchase' className='text-slate-600 text-xl font-bold font-josefin'>Purchase</Link></li>
-        <li><Link to='/dashboard' className='text-slate-600 text-xl font-bold font-josefin'>Dashboard</Link></li>
-        <li><Link to='/login' className='text-slate-600 text-xl font-bold font-josefin'>Login</Link></li>
+        <li><Link to='/home' className='text-slate-600 text-xl font-raleway'>Home</Link></li>
+        <li><Link to='/blog' className='text-slate-600 text-xl font-raleway'>Blog</Link></li>
+        <li><Link to='/myportfolio' className='text-slate-600 text-xl font-raleway'>My Portfolio</Link></li>
+        <li><Link to='/purchase' className='text-slate-600 text-xl font-raleway'>Purchase</Link></li>
+        <li><Link to='/dashboard' className='text-slate-600 text-xl font-raleway'>Dashboard</Link></li>
+        {
+            if(user){
+            <li><Link to='/signout' className='text-slate-600 text-xl font-raleway'>Sign Out</Link></li>
+        }
+        else{
+            <li><Link to='/login' className='text-slate-600 text-xl font-raleway'>Login</Link></li>
+        }
+        }
     </>
     return (
         <div className="navbar bg-base-100 lg:flex lg:justify-around">

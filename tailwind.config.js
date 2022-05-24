@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'finger': 'Finger Paint',
-        'josefin': 'Josefin Sans'
+        'josefin': 'Josefin Sans',
+        'raleway': 'Raleway'
       }
     },
   },
