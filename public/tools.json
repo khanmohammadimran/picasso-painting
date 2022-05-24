@@ -1,152 +1,92 @@
 [
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-        "name": "Tents",
-        "supplier": "MSR",
+        "name": "Roller",
         "minimumOrderQuantity": 150,
         "availableQuantity": 900,
         "price": 70,
-        "img": "https://i.ibb.co/k0J5TN4/tents.jpg",
-        "description": " It's Cheaper Living in a Tent. It's a Challenge. Living in a Tent Leaves A Smaller Footprint."
+        "img": "https://i.ibb.co/8xSTS8s/roller.png",
+        "description": "Using a roller enables you to cover a much larger area than using a brush. It is quicker, easier, and more convenient, and thanks to the handle of the roller, you can usually reach further from your starting position as well. Like the brushes you choose, do not buy low-quality rollers just to save a few dollars."
     },
     {
         "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
-        "name": "Travel Shoes",
-        "supplier": "Naot",
+        "name": "Sprayer",
         "minimumOrderQuantity": 80,
         "availableQuantity": 1600,
         "price": 25,
-        "img": "https://i.ibb.co/stGw8tX/travel-shoes.jpg",
-        "description": " Easy to slip on and off. Comfortable for long-haul flights. Versatility. Easy to pack. Good for walks. Durability."
+        "img": "https://i.ibb.co/NLPf4md/Sprayer.png",
+        "description": "A paint sprayer is a bit of extravagance if you only plan on painting a single room, but if you are redecorating an entire house or several homes, you can either rent or buy a paint sprayer to greatly reduce work time and ensure uniform painting results."
     },
     {
         "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
-        "name": "Hiking Bag",
-        "supplier": "Osprey",
+        "name": "Pole",
         "minimumOrderQuantity": 360,
         "availableQuantity": 125400,
         "price": 20,
-        "img": "https://i.ibb.co/VM8mj2c/hiking-bag.jpg",
-        "description": "A good hiking backpack ensures that you have just the right amount of space to carry all the supplies you need without burdening you with a heavy load."
+        "img": "https://i.ibb.co/Bc3znBW/Pole.png",
+        "description": "Your roller will likely only have a relatively short handle on it. Buy a pole that attaches to the end of the handle, ideally one that can twist and extend before twisting and locking. These allow you to get right up to the top of the walls and even paint the ceiling with one roller."
     },
     {
         "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
-        "name": "Hiking Jackets",
-        "supplier": "Patagonia",
+        "name": "Cleaner",
         "minimumOrderQuantity": 170,
         "availableQuantity": 8500,
         "price": 45,
-        "img": "https://i.ibb.co/fCy7dT4/hiking-jacket.jpg",
-        "description": "Waterproof. By default, many decent hiking jackets will come with waterproof capabilities as standard.Lightweight."
+        "img": "https://i.ibb.co/MSqmtPj/Cleaner.png",
+        "description": "Preparation really is one of the most important elements of ensuring that you get the best finish. If you have dirty walls, you wont get the best results. The paint will fail to adhere to greasy stains, while dirt and debris can cause shadows and prevent the paint from spreading evenly over the wall."
     },
     {
         "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
-        "name": "Climbing Belt",
-        "supplier": "Petzl Sitta",
+        "name": "Sponge",
         "minimumOrderQuantity": 40,
         "availableQuantity": 300,
         "price": 35,
-        "img": "https://i.ibb.co/LdT4fXt/climbing-belt.jpg",
-        "description": "A climbing harness is a device which allows a climber access to the safety of a rope.It is used in rock and ice climbing, abseiling, and lowering"
+        "img": "https://i.ibb.co/JytY2fj/Sponge.png",
+        "description": "You will need a sponge to effectively apply the wall cleaner to your walls and other surfaces. Ensure that the sponge is brand new and that you have chosen a good quality one. Old sponges harbor more dirt than you will be able to get rid of, while some sponges shed bits of the material on the wall and leave you with more work than they finish."
     },
     {
         "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
-        "name": "Water Bottles",
-        "supplier": "Klean Kanteen Kid Classic Sport Water Bottle",
+        "name": "Spackling",
         "minimumOrderQuantity": 500,
         "availableQuantity": 17000,
         "price": 5,
-        "img": "https://i.ibb.co/gJmMq05/water-bottle.jpg",
-        "description": " Water Bottles For Hiking Plus, stainless steel bottles prevent your water from getting too warm in hot climates. They also tend to hold up better if you drop them."
+        "img": "https://i.ibb.co/Z8RKDfz/Spackling.png",
+        "description": "Spackling paste, or putty, will be essential for the best looking walls. Whether you find that you have pulled a few small areas of plaster out while stripping wallpaper down, or there are multiple nail and screw holes in the wall, this filler putty will fill in the holes and can be prepped and painted once it is dry."
     },
     {
         "id": "9c0c13c2-54e4-4001-809b-afbd9d84037d",
-        "name": "Binoculars",
-        "supplier": "Celestron Cometron",
+        "name": "Caulk",
         "minimumOrderQuantity": 30,
         "availableQuantity": 210,
         "price": 160,
-        "img": "https://i.ibb.co/Stkwbhm/binoculars.jpg",
-        "description": "Binoculars are designed to give an upright view that is correctly oriented left-to-right. Because they allow use of both eyes in a natural way"
+        "img": "https://i.ibb.co/hFwFVgz/Caulk.png",
+        "description": "If you are working in bathrooms or around pipes, caulk will also be an important element in your painting arsenal. It seals edges and will also accept paint when treated properly."
     },
     {
         "id": "1564a06b-692f-4f2e-8413-9c8a1cc2da77",
-        "name": "Climbing Rope",
-        "supplier": "Black Diamond 9.6",
+        "name": "Strips",
         "minimumOrderQuantity": 85,
         "availableQuantity": 480,
         "price": 60,
-        "img": "https://i.ibb.co/5YLXDZc/climbing-rope.jpg",
-        "description": "A great way to develop grip, rope climbing helps build biceps and upper body. It helps develop physical and mental strength. If performed correctly rope climbing helps develop endurance"
+        "img": "https://i.ibb.co/zXsmh2X/Strips.png",
+        "description": "No matter how careful you are, you will make mistakes at some point in your painting career. You should find a reliable paint removal method that will work effectively and quickly to clean up your accidents and leave your paint job looking as good as new, or as good as you intended."
     },
     {
         "id": "ac44095f-230e-4502-8816-dea3eaae8320",
-        "name": "Compass",
-        "supplier": "Suunto",
+        "name": "Pants",
         "minimumOrderQuantity": 30,
         "availableQuantity": 3600,
         "price": 350,
-        "img": "https://i.ibb.co/Dw5C4Bd/compass.jpg",
-        "description": "Using a compass with a map gives a broader geographical context, helps you remember the route and learn about other things on the way. A compass and map are very reliable."
+        "img": "https://i.ibb.co/PjW35PF/Pants.png",
+        "description": "Or, you can keep your pencil in your painters pants, although we probably would not recommend it. Painters pants are essential, though, because they include loops to hold items like brushes and poles. They have extra pockets, including extra-large pockets, too. They also enable you to keep your scruffy jeans for doing the gardening and your everyday jeans for wearing everyday."
     },
     {
         "id": "d0803f97-966f-4296-ad31-a7f70fc86fab",
-        "name": "Fire Starter",
-        "supplier": "UST Strikeforce",
+        "name": "Tape",
         "minimumOrderQuantity": 500,
         "availableQuantity": 36500,
         "price": 7,
-        "img": "https://i.ibb.co/mvKYkhS/fire-starter.jpg",
-        "description": "it keeps you warm: this advantage is especially helpful if you're lost or in trouble somewhere in the wilderness provides a source of light."
-    },
-    {
-        "id": "8a5b4a9c-76ea-4fbb-9c70-9548de4eab01",
-        "name": "First Aid",
-        "supplier": "Red Cross",
-        "minimumOrderQuantity": 45,
-        "availableQuantity": 870,
-        "price": 90,
-        "img": "https://i.ibb.co/b1b2Xj4/first-aid.jpg",
-        "description": "It does more than help save lives. It's true that having first aid training undoubtedly helps save lives. It enables you to increase patient comfort."
-    },
-    {
-        "id": "b357e19b-4dd9-4fc7-b5c0-9ed5255464ba",
-        "name": "Head Lamp",
-        "supplier": "Petzl Actik Core",
-        "minimumOrderQuantity": 50,
-        "availableQuantity": 387,
-        "price": 25,
-        "img": "https://i.ibb.co/KNqfYrq/headlamp.jpg",
-        "description": "headlamps enhance the road safety because of clear illumination. It has very high service life compared to other types of headlamps."
-    },
-    {
-        "id": "e4220958-06d2-4d50-96fa-0163a563f43d",
-        "name": "Hiking Bottles",
-        "supplier": "Hydro Flask",
-        "minimumOrderQuantity": 85,
-        "availableQuantity": 1200,
-        "price": 20,
-        "img": "https://i.ibb.co/bJzBm3b/Hiking-bottles-holder.jpg",
-        "description": "Wide mouth water bottle is ideal for hiking because it is easier to refill from any water source. Besides it can be used to carry smoothies and thick shakes."
-    },
-    {
-        "id": "ae69f0e4-559c-4b24-8032-80b63f9b5073",
-        "name": "Hiking Jackets",
-        "supplier": "Cabela's",
-        "minimumOrderQuantity": 35,
-        "availableQuantity": 6540,
-        "price": 40,
-        "img": "https://i.ibb.co/xCMTyxV/Untitled-design-2.png",
-        "description": " A full-length pair of trekking pants gives reliable protection on the trail and avoids issues such as cuts or scrapes from thorny bushes, twigs."
-    },
-    {
-        "id": "dbf7ab3f-b383-4d95-8ab7-f55fcf6fa5f2",
-        "name": "Snow Glasses",
-        "supplier": "Oakley Flight Deck",
-        "minimumOrderQuantity": 90,
-        "availableQuantity": 19000,
-        "price": 30,
-        "img": "https://i.ibb.co/HGV70Dn/snow-glasses.jpg",
-        "description": " Snow glasses offer many benefits. They can help protect your eyes from harmful ultraviolet (UV) rays. As well as also offering color and contrast enhancement."
+        "img": "https://i.ibb.co/9VLKwQh/Tape.png",
+        "description": "Painters tape, which is usually blue tape, is easily applied to walls and door frames. Paint will not leak through it or bleed behind it, and once you have finished painting, it can be easily removed from the wall to leave you with sharp edges and a great looking paint finish. "
     }
 ]

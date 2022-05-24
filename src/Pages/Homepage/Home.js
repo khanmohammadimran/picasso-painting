@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useCustomHook from '../../Hooks/useCustomHook';
 import Banner from './Banner/Banner';
 
 const Home = () => {
-    const [tools, setTools] = useState([]);
+    const [tools] = useCustomHook();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        fetch('tools.json')
-            .then(res => res.json())
-            .then(data => setTools(data))
-    }, [])
+    const navigateToToolsDetail = _id => {
+        navigate(`/purchase/${_id}`)
+    }
     return (
         <div>
             <Banner></Banner>
@@ -18,18 +16,18 @@ const Home = () => {
                 <div className='text-center py-8'>
                     <h2 className="btn btn-ghost normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Picasso Painting</h2>
                 </div>
-                <div className='grid lg:grid-cols-3'>
+                <div className='grid lg:grid-cols-3 gap-8'>
                     {
-                        tools.slice(0, 6).map(tool => <div key={tool.id} className="card w-96 bg-base-100 shadow-xl">
+                        tools.slice(0, 6).map(tool => <div key={tool._id} className="card w-96 mx-auto bg-base-100 shadow-xl border-2">
                             <figure><img src={tool.img} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">Name: {tool.name}</h2>
-                                <p>Description: {tool.description}</p>
-                                <p>Minimum Quantity: {tool.minimumOrderQuantity}</p>
-                                <p>Available Quantity: {tool.availableQuantity}</p>
-                                <p>Price: ${tool.price}</p>
+                                <h2 className="card-title font-raleway">Name: {tool.name}</h2>
+                                <p className='font-raleway'><strong>Description:</strong> {tool.description}</p>
+                                <p className='font-sans'><strong>Minimum Quantity:</strong> {tool.minimumOrderQuantity}</p>
+                                <p className='font-sans'><strong>Available Quantity:</strong> {tool.availableQuantity}</p>
+                                <p className='font-sans'><strong>Price:</strong> ${tool.price}</p>
                                 <div className="card-actions justify-start">
-                                    <button onClick={() => navigate('/purchase')} className="btn btn-primary">Purchase Now</button>
+                                    <button onClick={() => navigateToToolsDetail(tool._id)} className='btn btn-ghost border-0 font-sans text-white w-full max-w-xs bg-gradient-to-r from-purple-400 to-pink-600'>Purchase Now</button>
                                 </div>
                             </div>
                         </div>)
