@@ -28,8 +28,15 @@ const Purchase = () => {
         console.log(number)
         minimumOrderQuantity = parseInt(minimumOrderQuantity);
         availableQuantity = parseInt(availableQuantity);
-        if (minimumOrderQuantity > number || availableQuantity < number) {
-            return toast.error('Please order atleast Minimum Quantity')
+        if (minimumOrderQuantity > number) {
+            return toast.error('Please order atleast Minimum Quantity', {
+                position: toast.POSITION.BOTTOM_RIGHT
+            })
+        }
+        else if (availableQuantity < number) {
+            return toast.error('You cannot order more than available quantity', {
+                position: toast.POSITION.BOTTOM_RIGHT
+            })
         }
         else {
             const url = `http://localhost:5000/tools/${purchaseId}`
@@ -57,42 +64,58 @@ const Purchase = () => {
 
 
     return (
-        <div className="py-8">
-            <div className='bg-white w-1/2 mx-auto rounded-lg drop-shadow-2xl p-2'>
-                <h2 className='text-center font-raleway text-3xl py-5'>See The Detail of the Tool</h2>
-                <h2 className='text-center font-raleway text-3xl py-5'>{user.displayName}</h2>
-                <h2 className='text-center font-raleway text-3xl py-5'>{user.email}</h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 items-center bg-white'>
+        <div className='bg-white font-raleway'>
+            <div className="hero w-1/2 mx-auto shadow-xl bg-white my-8 rounded-lg">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img className='w-1/2' src={tools.img} alt="" />
                     <div>
-                        <img className='sm:object-cover mx-auto md:w-96 text-center p-3 rounded-lg' src={tools.img} alt="" />
-                    </div>
-                    <div className='font-sans'>
-                        <h2 className='pb-1 text-2xl'>Tool Name: {tools.name}</h2>
-                        <hr />
-                        <p className='pb-1 text-2xl'>Price: ${tools.price}</p>
-                        <hr />
-                        <p className='pb-1 text-2xl'>Minimum Order Quantity: {tools.minimumOrderQuantity}</p>
-                        <hr />
-                        <p className='pb-1 text-2xl'>Available Quantity: {tools.availableQuantity}</p>
-                        <hr />
-                        <p className='pb-1 text-2xl'>Single tool price: {tools.price}</p>
-                        <hr />
-                        <p className='pb-1 text-2xl'>Description:</p><span>{tools.description}</span>
+                        <h2 className='text-xl pb-2'><strong>See The Detail about the Tool</strong></h2>
+                        <h2 className='text-xl pb-2'><strong>Tool Name:</strong> {tools.name}</h2>
+                        <p><strong>Description</strong>{tools.description}</p>
                     </div>
                 </div>
-                <div className='text-center pb-4'>
-                    <div className="relative flex py-5 items-center">
-                        <div className="flex-grow border-t border-lime-500"></div>
-                        <span className="flex-shrink mx-4 font-playfair text-2xl">Increase Quantity</span>
-                        <div className="flex-grow border-t border-lime-500"></div>
+            </div>
+            <div className='bg-white w-1/2 mx-auto shadow-lg rounded-lg p-8'>
+                <form onSubmit={handleSubmit}>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input value={user.displayName} readOnly disabled className="input input-bordered" />
                     </div>
-                    <form onSubmit={handleSubmit}>
-                        <input type="number" name="number" placeholder='Restock item Quantity' className=' border w-1/2 py-4 p-2 rounded-lg mb-2 font-sans' />
-                        <br />
-                        <input type="submit" value="Purchase" className='bg-lime-500 hover:bg-lime-600 rounded-lg w-1/2 py-2 text-white text-2xl' />
-                    </form>
-                    <ToastContainer></ToastContainer>
-                </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input value={user.email} readOnly disabled className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Minimum Quantity</span>
+                        </label>
+                        <input value={tools.minimumOrderQuantity} className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Available Quantity</span>
+                        </label>
+                        <input value={tools.availableQuantity} className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Single Quantity Price</span>
+                        </label>
+                        <input value={tools.price} className="input input-bordered" />
+                    </div>
+                    <div className="form-control pb-3">
+                        <label className="label">
+                            <span className="label-text">Add Tools Quantity</span>
+                        </label>
+                        <input type="number" name="number" placeholder='Enter Quantity' className=' input input-bordered' />
+                    </div>
+                    <input className='btn btn-primary w-full' type="submit" value="Purchase" />
+                </form>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
