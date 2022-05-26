@@ -15,6 +15,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link to='/home' className='text-slate-600 text-xl font-raleway'>Home</Link></li>
+        <li><Link to='/allproduct' className='text-slate-600 text-xl font-raleway'>Purchase</Link></li>
         <li><Link to='/blog' className='text-slate-600 text-xl font-raleway'>Blog</Link></li>
         <li><Link to='/myportfolio' className='text-slate-600 text-xl font-raleway'>My Portfolio</Link></li>
         {

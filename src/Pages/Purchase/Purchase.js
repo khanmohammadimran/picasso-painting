@@ -25,7 +25,7 @@ const Purchase = () => {
         event.preventDefault();
         let number = event.target.number.value;
         const purchase = {
-            name: tools.name,
+            ToolsName: tools.name,
             customer: user.email,
             customerName: user.displayName,
             toolsQuantity: event.target.number.value,
@@ -112,6 +112,12 @@ const Purchase = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input value={user.email} readOnly className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Tool Name</span>
+                        </label>
+                        <input name='ToolsName' value={tools.name} readOnly disabled className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
