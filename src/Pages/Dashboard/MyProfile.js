@@ -1,8 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
-import UserRow from './UserRow';
-
+import UserRow from '../Dashboard/UserRow'
+import Loading from '../Shared/Loading'
 const MyProfile = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
