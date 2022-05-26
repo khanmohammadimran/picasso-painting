@@ -24,8 +24,15 @@ const Purchase = () => {
     const handleSubmit = event => {
         event.preventDefault();
         let number = event.target.number.value;
+        const purchase = {
+            name: tools.name,
+            customer: user.email,
+            customerName: user.displayName,
+            toolsQuantity: event.target.number.value
+
+        }
         number = parseInt(number)
-        console.log(number)
+        console.log(number, user.email)
         minimumOrderQuantity = parseInt(minimumOrderQuantity);
         availableQuantity = parseInt(availableQuantity);
         if (minimumOrderQuantity > number) {
@@ -59,6 +66,22 @@ const Purchase = () => {
                 });
         }
 
+        fetch('http://localhost:5000/mypurchase', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(purchase)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast.success('Please checkout the product on My Item page', {
+                    position: toast.POSITION.BOTTOM_RIGHT
+                })
+                console.log(data)
+
+            })
+
 
     }
 
@@ -87,25 +110,25 @@ const Purchase = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input value={user.email} readOnly disabled className="input input-bordered" />
+                        <input value={user.email} readOnly className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Minimum Quantity</span>
                         </label>
-                        <input value={tools.minimumOrderQuantity} className="input input-bordered" />
+                        <input value={tools?.minimumOrderQuantity} className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
                         </label>
-                        <input value={tools.availableQuantity} className="input input-bordered" />
+                        <input value={tools?.availableQuantity} className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Single Quantity Price</span>
                         </label>
-                        <input value={tools.price} className="input input-bordered" />
+                        <input value={tools?.price} className="input input-bordered" />
                     </div>
                     <div className="form-control pb-3">
                         <label className="label">
@@ -113,7 +136,7 @@ const Purchase = () => {
                         </label>
                         <input type="number" name="number" placeholder='Enter Quantity' className=' input input-bordered' />
                     </div>
-                    <input className='btn btn-primary w-full' type="submit" value="Purchase" />
+                    <input className='btn btn-ghost border-0 font-sans text-white w-full bg-gradient-to-r from-purple-400 to-pink-600' type="submit" value="Purchase" />
                 </form>
                 <ToastContainer></ToastContainer>
             </div>

@@ -17,7 +17,9 @@ const Navbar = () => {
         <li><Link to='/blog' className='text-slate-600 text-xl font-raleway'>Blog</Link></li>
         <li><Link to='/myportfolio' className='text-slate-600 text-xl font-raleway'>My Portfolio</Link></li>
         <li><Link to='/purchase' className='text-slate-600 text-xl font-raleway'>Purchase</Link></li>
-        <li><Link to='/dashboard' className='text-slate-600 text-xl font-raleway'>Dashboard</Link></li>
+        {
+            user && <li><Link to='/dashboard' className='text-slate-600 text-xl font-raleway'>Dashboard</Link></li>
+        }
         <li>{user ? <button onClick={logout} className="btn btn-ghost text-slate-600 text-xl font-raleway normal-case font-normal">Sign Out</button> : <Link to='/login' className='text-slate-600 text-xl font-raleway'>Login</Link>}</li>
     </>
     return (
@@ -37,6 +39,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                <label tabIndex="1" htmlFor="dashSidebar" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
             </div>
         </div>
     );

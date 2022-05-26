@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useCustomHook from '../../Hooks/useCustomHook';
 import Banner from './Banner/Banner';
+import Gallery from './Gallery/Gallery';
+import News from './News'
 
 const Home = () => {
     const [tools] = useCustomHook();
@@ -34,7 +36,7 @@ const Home = () => {
                     }
                 </div>
                 <div className='text-center py-8'>
-                    <h2 className="btn btn-ghost normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Business Summary</h2>
+                    <h2 className="font-bold normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Business Summary</h2>
                 </div>
                 <div className="stats stats-vertical lg:stats-horizontal shadow grid justify-center lg:justify-evenly">
 
@@ -58,6 +60,8 @@ const Home = () => {
                     <h2 className="btn btn-ghost normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Reviews</h2>
                 </div>
             </div>
+            <Gallery></Gallery>
+            <News></News>
         </div>
     );
 };
