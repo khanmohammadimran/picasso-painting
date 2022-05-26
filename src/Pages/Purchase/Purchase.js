@@ -28,7 +28,8 @@ const Purchase = () => {
             name: tools.name,
             customer: user.email,
             customerName: user.displayName,
-            toolsQuantity: event.target.number.value
+            toolsQuantity: event.target.number.value,
+            toolsPrice: event.target.price.value
 
         }
         number = parseInt(number)
@@ -128,7 +129,7 @@ const Purchase = () => {
                         <label className="label">
                             <span className="label-text">Single Quantity Price</span>
                         </label>
-                        <input value={tools?.price} className="input input-bordered" />
+                        <input name='price' value={tools?.price} className="input input-bordered" />
                     </div>
                     <div className="form-control pb-3">
                         <label className="label">
