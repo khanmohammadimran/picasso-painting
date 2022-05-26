@@ -4,15 +4,20 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const MyProfile = () => {
-    const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }
     return (
         <div>
             <h2 className='text-slate-600 font-raleway py-4 font-bold'>This is My Profile: {users.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className=" overflow-x-auto">
+                <table className=" table w-full">
                     <thead>
                         <tr>
                             <th></th>
@@ -26,12 +31,13 @@ const MyProfile = () => {
                             users.map(user => <UserRow
                                 key={user._id}
                                 user={user}
+                                refetch={refetch}
                             ></UserRow>)
                         }
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
