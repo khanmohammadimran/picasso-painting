@@ -18,6 +18,7 @@ import AllUser from './Pages/Dashboard/Dashboard/AllUser'
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AllProduct from './AllProduct/AllProduct';
 import Payment from './Pages/Dashboard/Payment';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path='/dashboard/payment/:id' element={<Payment />}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="addproduct" element={<AddProduct></AddProduct>}></Route>
           <Route path="alluser" element={<RequireAdmin>
             <AllUser></AllUser>
           </RequireAdmin>}></Route>

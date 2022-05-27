@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useCustomHook from '../Hooks/useCustomHook';
 
 const AllProduct = () => {
-    const [tools] = useCustomHook();
+    const [tools, setTools] = useState([]);
     const navigate = useNavigate();
     const navigateToToolsDetail = _id => {
         navigate(`/purchase/${_id}`)
     }
+    useEffect(() => {
+        fetch('http://localhost:5000/tools')
+            .then(res => res.json())
+            .then(data => setTools(data))
+    }, [])
 
 
     return (
