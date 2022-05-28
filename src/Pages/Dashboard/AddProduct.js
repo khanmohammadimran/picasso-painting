@@ -1,33 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
 const AddProduct = () => {
+    const [imageURL, setImageURL] = useState("")
+    const [imgLoading, setimgLoading] = useState(false);
+    console.log(imageURL)
     const handleSubmit = (e) => {
         e.preventDefault();
         const name = e.target.name.value
         const price = e.target.price.value
         const quantity = parseInt(e.target.quantity.value)
         const moq = e.target.moq.value
-        const image = e.target.image.value
+        // const image = e.target.image.value
         const description = e.target.description.value
         toast.success('You have successfully added a product', {
             position: toast.POSITION.BOTTOM_RIGHT
         })
-        // const productName = e.target.product.value
-        // const quantity = parseInt(e.target.quantity.value)
 
         const data = {
             name: name,
             price: price,
             availableQuantity: quantity,
             minimumOrderQuantity: moq,
-            img: image,
+            img: imageURL,
             description: description
 
         }
         console.log(data)
 
-        fetch('http://localhost:5000/tools', {
+        fetch('https://mighty-everglades-23547.herokuapp.com/tools', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -39,6 +41,21 @@ const AddProduct = () => {
                 console.log(data)
 
             })
+    }
+
+    const handleUploadImage = (event) => {
+        setimgLoading(true);
+        const image = event.target.files[0]
+        const formData = new FormData();
+        formData.set("image", image)
+
+        axios.post('https://api.imgbb.com/1/upload?key=eff07e44130af2c97b3d373a81979e4b', formData)
+            .then((res) => {
+                setImageURL(res.data.data.display_url)
+                setimgLoading(false)
+            }).catch((error) => {
+                console.log(error)
+            });
     }
 
     return (
@@ -59,12 +76,15 @@ const AddProduct = () => {
                         <div className='pb-3'>
                             <input type="text" name='moq' placeholder='Minimum Quantity' className="input input-bordered w-full" />
                         </div>
-                        <div className='pb-3'>
-                            <label for="MOQ" className="block mb-2 text-left text-sm font-medium text-gray-900 dark:text-gray-300">Image</label>
+                        {/* <div className='pb-3'>
+                            <label htmlFor="MOQ" className="block mb-2 text-left text-sm font-medium text-gray-900 dark:text-gray-300">Image</label>
                             <input type="text" defaultValue={"https://i.ibb.co/zXsmh2X/Strips.png"} name='image' className="input input-bordered w-full" />
+                        </div> */}
+                        <div className='pb-3'>
+                            <input type="file" onChange={handleUploadImage} name="img-hosting" placeholder='Tool Name' className="input input-bordered w-full " />
                         </div>
                         <div>
-                            <textarea name='description' class=" w-full textarea textarea-bordered" placeholder="Description"></textarea>
+                            <textarea name='description' className=" w-full textarea textarea-bordered" placeholder="Description"></textarea>
                         </div>
                     </div>
                     <button type="submit" className="btn btn-ghost border-0 font-sans text-white w-full bg-gradient-to-r from-purple-400 to-pink-600">Submit</button>

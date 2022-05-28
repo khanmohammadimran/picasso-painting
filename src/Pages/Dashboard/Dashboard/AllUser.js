@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import UserRow from '../../Dashboard/UserRow'
 import Loading from '../../Shared/Loading';
 const AllUser = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://mighty-everglades-23547.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

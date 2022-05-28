@@ -10,9 +10,11 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
 
+    console.log(orders)
+
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/mypurchase?customer=${user.email}`, {
+            fetch(`https://mighty-everglades-23547.herokuapp.com/mypurchase?customer=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -46,7 +48,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody className='font-raleway'>
                         {
-                            orders.map((order, index) => <tr>
+                            orders.map((order, index) => <tr >
                                 <th>{index + 1}</th>
                                 <td>{order.name}</td>
                                 <td>{order.toolsQuantity}</td>

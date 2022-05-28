@@ -8,7 +8,7 @@ const AllProduct = () => {
         navigate(`/purchase/${_id}`)
     }
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://mighty-everglades-23547.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])

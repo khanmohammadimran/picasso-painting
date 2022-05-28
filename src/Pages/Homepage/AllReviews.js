@@ -4,7 +4,7 @@ const AllReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/review")
+        fetch("https://mighty-everglades-23547.herokuapp.com/review")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);
@@ -20,7 +20,7 @@ const AllReviews = () => {
                             <span className="text-3xl">{review.name.slice(0, 1)}</span>
                         </div>
                     </div>
-                    <div className="card-body items-center text-center">
+                    <div className="card-body items-center text-center font-raleway">
                         <h2 className="card-title">{review.name}</h2>
                         <p>{review.review}</p>
                     </div>

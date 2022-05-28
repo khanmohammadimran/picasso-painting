@@ -14,7 +14,7 @@ const Home = () => {
         navigate(`/purchase/${_id}`)
     }
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://mighty-everglades-23547.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
@@ -69,16 +69,7 @@ const Home = () => {
 
                 </div>
                 <div className='text-center py-8'>
-                    {/* <h2 className="btn btn-ghost normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Reviews</h2>
-                    {
-                        reviews.map((review) => (
-                            <AddReview
-                                key={review._id}
-                                review={review}
-
-                            ></AddReview>
-                        ))
-                    } */}
+                    <h2 className="mb-8 font-bold normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Reviews</h2>
                     <AllReviews></AllReviews>
                 </div>
             </div>

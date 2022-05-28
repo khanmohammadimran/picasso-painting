@@ -13,7 +13,7 @@ const Purchase = () => {
     let { minimumOrderQuantity, availableQuantity } = tools;
 
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${purchaseId}`
+        const url = `https://mighty-everglades-23547.herokuapp.com/tools/${purchaseId}`
 
         fetch(url)
             .then(res => res.json())
@@ -47,7 +47,7 @@ const Purchase = () => {
             })
         }
         else {
-            const url = `http://localhost:5000/tools/${purchaseId}`
+            const url = `https://mighty-everglades-23547.herokuapp.com/tools/${purchaseId}`
             console.log(url)
             fetch(url, {
                 method: 'PATCH',
@@ -67,7 +67,7 @@ const Purchase = () => {
                 });
         }
 
-        fetch('http://localhost:5000/mypurchase', {
+        fetch('https://mighty-everglades-23547.herokuapp.com/mypurchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

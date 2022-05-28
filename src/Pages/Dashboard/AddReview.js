@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const AddAReview = () => {
     const {
@@ -14,7 +14,7 @@ const AddAReview = () => {
             review: data.review,
         };
         console.log(review);
-        fetch("http://localhost:5000/review", {
+        fetch("https://mighty-everglades-23547.herokuapp.com/review", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -25,16 +25,18 @@ const AddAReview = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result);
-                toast.success("thank for your order");
+                toast.success('Your review added', {
+                    position: toast.POSITION.BOTTOM_RIGHT
+                })
             });
     };
     return (
-        <section className="w-full mt-4">
-            <div className="max-w-7xl mx-auto px-4 ">
+        <section className="w-full mt-4 bg-white">
+            <div className="max-w-7xl mx-auto px-4 font-raleway ">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control">
-                        <h2 className="text-3xl font-bold text-accent py-4">
-                            Add A Review
+                        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 py-8 py-4">
+                            Add Your Valuable Review
                         </h2>
 
                         <input
@@ -73,14 +75,14 @@ const AddAReview = () => {
                             )}
                         </label>
                     </div>
-                    <div className="form-control mt-6">
+                    <div className="form-control mt-6 items-center">
                         <input
                             type="submit"
-                            className="btn border-none w-1/4 mx-auto hover:bg-secondary rounded-xl hover:text-white text-accent font-semibold px-8 py-3 bg-primary"
-                            value="Add a Review"
-                        />
+                            className="btn btn-ghost border-0 font-sans text-white w-1/2 bg-gradient-to-r from-purple-400 to-pink-600"
+                            value="Add a Review" />
                     </div>
                 </form>
+                <ToastContainer></ToastContainer>
             </div>
         </section>
     );
