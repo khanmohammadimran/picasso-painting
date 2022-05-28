@@ -53,7 +53,7 @@ const MyOrders = () => {
                                 <td>{order.name}</td>
                                 <td>{order.toolsQuantity}</td>
                                 <td>{order.toolsPrice}</td>
-                                <td><Link to={`/dashboard/payment/${order._id}`}>Pay</Link></td>
+                                {/* <td><Link to={`/dashboard/payment/${order._id}`}>Pay</Link></td> */}
                             </tr>)
                         }
                     </tbody>
