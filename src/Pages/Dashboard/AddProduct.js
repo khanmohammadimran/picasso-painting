@@ -76,12 +76,8 @@ const AddProduct = () => {
                         <div className='pb-3'>
                             <input type="text" name='moq' placeholder='Minimum Quantity' className="input input-bordered w-full" />
                         </div>
-                        {/* <div className='pb-3'>
-                            <label htmlFor="MOQ" className="block mb-2 text-left text-sm font-medium text-gray-900 dark:text-gray-300">Image</label>
-                            <input type="text" defaultValue={"https://i.ibb.co/zXsmh2X/Strips.png"} name='image' className="input input-bordered w-full" />
-                        </div> */}
-                        <div className='pb-3'>
-                            <input type="file" onChange={handleUploadImage} name="img-hosting" placeholder='Tool Name' className="input input-bordered w-full " />
+                        <div className='pb-2 font-raleway'>
+                            <input type="file" onChange={handleUploadImage} name="img-hosting" placeholder='Tool Name' className="input input-bordered w-full p-3 " />
                         </div>
                         <div>
                             <textarea name='description' className=" w-full textarea textarea-bordered" placeholder="Description"></textarea>
