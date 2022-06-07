@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
                 <div className='grid lg:grid-cols-3 gap-8'>
                     {
-                        tools.slice(0, 6).reverse().map(tool => <div key={tool._id} className="card w-96 mx-auto bg-base-100 shadow-xl border-2">
+                        tools.slice(0, 6).reverse().map(tool => <div key={tool._id} className="card mx-auto bg-base-100 shadow-xl border-2">
                             <figure><img src={tool.img} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title font-raleway">Name: {tool.name}</h2>
@@ -68,8 +68,9 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className='text-center py-8'>
-                    <h2 className="mb-8 font-bold normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Reviews</h2>
+                <div className='text-center pt-16'>
+                    <h2 className="font-bold normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Reviews</h2>
+                    <p className='mb-8 mt-4 text-xl font-raleway'>See what client say about us</p>
                     <AllReviews></AllReviews>
                 </div>
             </div>

@@ -5,7 +5,7 @@ const News = () => {
     return (
         <div className='font-raleway'>
             <h2 className="font-bold normal-case text-4xl font-josefin text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center pb-8">News and Articles</h2>
-            <div className="card card-compact w-1/2 bg-base-100 shadow-xl mx-auto lg:flex">
+            <div className="card card-compact lg:w-1/2 bg-base-100 shadow-xl mx-auto lg:flex">
                 <div>
                     <figure><img src={kitchen} alt="" /></figure>
                 </div>

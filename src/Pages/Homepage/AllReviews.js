@@ -16,8 +16,8 @@ const AllReviews = () => {
             {
                 reviews.map(review => <div key={review._id} className="card bg-base-100 shadow-xl">
                     <div className="avatar placeholder">
-                        <div className="mx-auto bg-neutral-focus text-neutral-content rounded-full w-24">
-                            <span className="text-3xl">{review.name.slice(0, 1)}</span>
+                        <div className="mx-auto bg-gradient-to-r from-purple-400 to-pink-600 text-neutral-content rounded-full w-24">
+                            <span className="text-3xl text-white">{review.name.slice(0, 1)}</span>
                         </div>
                     </div>
                     <div className="card-body items-center text-center font-raleway">
